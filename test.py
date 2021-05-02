@@ -1,33 +1,13 @@
-# Run the unit tests
+# Unit test runner for SCM Coding Test 1: Promotion Engine
 
-class Promotion:
-        def apply(productList, cart):
-                """
-                Apply the promotion to the given cart and product list.
-                
-                Parameters:
-                - productList: Product unit prices mapped by SKU ID
-                - cart: Product counts mapped by SKU ID
-
-                Returns: The discount to apply to the cart's list value
-                """
-                return 0
+from promotion import Promotion
+from promotion_engine import PromotionEngine
 
 class ThreeOfAFor130(): Promotion
 
 class TwoOfBFor45: Promotion
 
 class CAndDFor30: Promotion 
-
-class PromotionEngine:
-        def __init__(self, productList, activePromotions):
-                self.productList = productList
-                self.activePromotions = activePromotions 
-
-        def calculateTotalPrice(self, cart):
-                """Calculate the cart's total value by applying the first valid promotion in activePromotions"""
-                return 0
-
 
 def testCase(name, productList, activePromotions, cart, expected):
         """Test applying active promotions to a cart"""

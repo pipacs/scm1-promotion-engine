@@ -4,5 +4,9 @@
 
 * Python 3
 
-## Testing
+## Running The Unit Tests
+
+```shell
+python3 test.py
+```
 
