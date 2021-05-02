@@ -13,7 +13,10 @@ class PromotionEngine:
                 - activePromotions: List of Promotion instances
                 """
                 self.productList = productList
-                self.activePromotions = activePromotions 
+                self.activePromotions = activePromotions
+                
+                # Set to true to apply the first promotion only, as mentioned in the coding excercise:
+                self.applyFirstPromotionOnly = False
 
         def calculateTotalPrice(self, cart):
                 """
@@ -30,7 +33,7 @@ class PromotionEngine:
                 for promotion in self.activePromotions:
                         discount = promotion.value(self.productList, cart)
                         price += discount
-                        if discount != 0:
+                        if self.applyFirstPromotionOnly and discount != 0:
                                 break 
                 return price
 
