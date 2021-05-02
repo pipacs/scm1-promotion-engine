@@ -3,11 +3,14 @@
 from promotion import Promotion
 from promotion_engine import PromotionEngine
 
-class ThreeOfAFor130(): Promotion
+class ThreeOfAFor130(Promotion):
+        pass
 
-class TwoOfBFor45: Promotion
+class TwoOfBFor45(Promotion):
+        pass
 
-class CAndDFor30: Promotion 
+class CAndDFor30(Promotion):
+        pass 
 
 def testCase(name, productList, activePromotions, cart, expected):
         """Test applying active promotions to a cart"""
@@ -45,7 +48,7 @@ if __name__ == "__main__":
                 "A": 3,
                 "B": 5,
                 "C": 1,
-                "D": 1
+                "D": 1,
         }
         testCase("Testing Cart 1", productList, activePromotions, cartA, 100)
         testCase("Testing Cart 2", productList, activePromotions, cartB, 370)

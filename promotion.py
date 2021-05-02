@@ -1,7 +1,7 @@
 class Promotion:
         """A promotion that can be applied to a shopping cart"""
 
-        def apply(productList, cart):
+        def value(self, productList, cart):
                 """
                 Apply the promotion to the given cart and product list.
                 
