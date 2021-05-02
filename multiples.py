@@ -18,7 +18,7 @@ class Multiples(Promotion):
                 self.batchSize = batchSize
                 self.batchPrice = batchPrice
 
-        def value(self, productList, cart):
+        def calculateDiscount(self, productList, cart):
                 if not self.sku in cart:
                         return 0
                 if not self.sku in productList:

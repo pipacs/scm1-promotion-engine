@@ -20,7 +20,7 @@ class PromotionEngine:
 
         def calculateTotalPrice(self, cart):
                 """
-                Calculate the cart's total value by applying the first valid promotion in activePromotions
+                Calculate the cart's total value by applying the promotions in activePromotions
  
                 Parameters:
                 - cart: Product counts mapped by SKU ID
@@ -31,7 +31,7 @@ class PromotionEngine:
                 """
                 price = self.calculateNominalPrice(cart)
                 for promotion in self.activePromotions:
-                        discount = promotion.value(self.productList, cart)
+                        discount = promotion.calculateDiscount(self.productList, cart)
                         price += discount
                         if self.applyFirstPromotionOnly and discount != 0:
                                 break 
