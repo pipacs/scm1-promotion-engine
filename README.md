@@ -1,2 +1,8 @@
-# scm1-promotion-engine
-SCM coding test 1: Promotion engine
+# SCM Coding Test 1: Promotion Engine
+
+## Dependencies
+
+* Python 3
+
+## Testing
+
