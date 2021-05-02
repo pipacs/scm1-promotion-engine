@@ -1,3 +1,5 @@
+# Base Promotion type
+
 class Promotion:
         """A promotion that can be applied to a shopping cart"""
 

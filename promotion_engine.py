@@ -29,9 +29,9 @@ class PromotionEngine:
                 price = self.calculateNominalPrice(cart)
                 for promotion in self.activePromotions:
                         discount = promotion.value(self.productList, cart)
+                        price += discount
                         if discount != 0:
                                 break 
-                        price += discount
                 return price
 
         def calculateNominalPrice(self, cart):
