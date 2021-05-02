@@ -3,6 +3,9 @@
 class Promotion:
         """A promotion that can be applied to a shopping cart"""
 
+        def __init__(self):
+                pass
+
         def calculateDiscount(self, productList, cart):
                 """
                 Calculate the discount for the given cart and product list.

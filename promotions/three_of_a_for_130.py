@@ -5,4 +5,4 @@ from invalid_cart import InvalidCart
 
 class ThreeOfAFor130(Multiples):
         def __init__(self):
-                super().__init__("A", 3, 130)
+                Multiples.__init__(self, "A", 3, 130)

@@ -13,7 +13,7 @@ class Multiples(Promotion):
                 - batchSize: The number of products where the special price should apply
                 - batchPrice: The special price for `batchSize` number of products
                 """
-                super().__init__()
+                Promotion.__init__(self)
                 self.sku = sku 
                 self.batchSize = batchSize
                 self.batchPrice = batchPrice

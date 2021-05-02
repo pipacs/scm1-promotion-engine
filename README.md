@@ -2,7 +2,7 @@
 
 ## Dependencies
 
-* Python 3
+* Python (version 2 or 3)
 
 ## Running The Unit Tests
 
@@ -13,6 +13,6 @@ python3 test.py
 
 ## Notes
 
-The coding instructions document hints that promotions are mutually exclusive. However test data implies that all promotions should be applied to the shopping cart.
+The coding instructions document hints that promotions are mutually exclusive. However test data implies that all promotions should be applied.
 
 This code implements the second version (all promotions applied). For mutually exclusive promotions, set ```applyFirstPromotionOnly``` to ```True``` in _promotion_engine.py_.

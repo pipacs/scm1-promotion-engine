@@ -6,4 +6,4 @@ from multiples import Multiples
 
 class TwoOfBFor45(Multiples):
         def __init__(self):
-                super().__init__("B", 2, 45)
+                Multiples.__init__(self, "B", 2, 45)
