@@ -28,5 +28,4 @@ class Multiples(Promotion):
                 batchCount = count // self.batchSize
                 remainingCount = count - batchCount * self.batchSize
                 promotedPrice = batchCount * self.batchPrice + remainingCount * productList[self.sku]
-                discount = nominalPrice - promotedPrice
-                return -discount 
+                return nominalPrice - promotedPrice 

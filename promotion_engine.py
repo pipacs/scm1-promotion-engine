@@ -32,7 +32,7 @@ class PromotionEngine:
                 price = self.calculateNominalPrice(cart)
                 for promotion in self.activePromotions:
                         discount = promotion.calculateDiscount(self.productList, cart)
-                        price += discount
+                        price -= discount
                         if self.applyFirstPromotionOnly and discount != 0:
                                 break 
                 return price
