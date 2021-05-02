@@ -2,9 +2,7 @@
 
 from promotion import Promotion
 from promotion_engine import PromotionEngine
-
-class ThreeOfAFor130(Promotion):
-        pass
+from three_of_a_for_130 import ThreeOfAFor130
 
 class TwoOfBFor45(Promotion):
         pass
@@ -34,22 +32,12 @@ if __name__ == "__main__":
                 TwoOfBFor45(),
                 CAndDFor30(),
         ]
-        cartA = {
-                "A": 1,
-                "B": 1,
-                "C": 1
-        }
-        cartB = {
-                "A": 5,
-                "B": 5,
-                "C": 1,
-        }
-        cartC = {
-                "A": 3,
-                "B": 5,
-                "C": 1,
-                "D": 1,
-        }
-        testCase("Testing Cart 1", productList, activePromotions, cartA, 100)
-        testCase("Testing Cart 2", productList, activePromotions, cartB, 370)
-        testCase("Testing Cart 3", productList, activePromotions, cartC, 280)
+ 
+        # Tests of individual promotions
+        testCase("Testing 'Three of A for 130 with 5 A'", productList, activePromotions, {"A": 5}, 230)
+        testCase("Testing 'Three of A for 130 with 2 A'", productList, activePromotions, {"A": 2}, 100)
+
+        # Tests in the coding excercise
+        testCase("Testing Cart A", productList, activePromotions, {"A": 1, "B": 1, "C": 1}, 100)
+        testCase("Testing Cart B", productList, activePromotions, {"A": 5, "B": 5, "C": 1}, 370)
+        testCase("Testing Cart C", productList, activePromotions, {"A": 3, "B": 5, "C": 1, "D": 1}, 280)
