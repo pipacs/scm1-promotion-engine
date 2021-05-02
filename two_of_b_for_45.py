@@ -2,18 +2,8 @@
 
 from promotion import Promotion
 from invalid_cart import InvalidCart
+from multiples import Multiples
 
-class TwoOfBFor45(Promotion):
-        def value(self, productList, cart):
-                if not "B" in cart:
-                        return 0
-                if not "B" in productList:
-                        raise InvalidCart()
-                count = cart["B"]
-                nominalPrice = count * productList["B"]
-                promotedCount = count // 2
-                remainingCount = count - promotedCount * 2
-                promotedPrice = promotedCount * 45 + remainingCount * productList["B"]
-                discount = nominalPrice - promotedPrice
-                return -discount 
-
+class TwoOfBFor45(Multiples):
+        def __init__(self):
+                super().__init__("B", 2, 45)
