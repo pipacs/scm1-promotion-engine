@@ -6,7 +6,13 @@
 
 ## Running The Unit Tests
 
-```shell
+```sh
+cd <repository_root>
 python3 test.py
 ```
 
+## Notes
+
+The coding instructions document hints that promotions are mutually exclusive. However test data implies that all promotions should be applied to the shopping cart.
+
+This code implements the second version (all promotions applied). For mutually exclusive promotions, set ```applyFirstPromotionOnly``` to ```True``` in _promotion_engine.py_.
