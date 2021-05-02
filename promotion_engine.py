@@ -1,6 +1,5 @@
 # Promotion engine
 
-from promotion import Promotion
 from invalid_cart import InvalidCart
 
 class PromotionEngine:

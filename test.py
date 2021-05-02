@@ -1,6 +1,8 @@
 # Unit test runner for SCM Coding Test 1: Promotion Engine
 
-from promotion import Promotion
+import sys, os
+sys.path.append(os.path.join(os.path.dirname(os.path.realpath(__file__)), "promotions"))
+
 from promotion_engine import PromotionEngine
 from three_of_a_for_130 import ThreeOfAFor130
 from two_of_b_for_45 import TwoOfBFor45
